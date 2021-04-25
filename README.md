@@ -6,9 +6,9 @@ We additionally provide a good variety of sketch export options (polylines of in
 
 Please check out our project for more information: [[Project page]](https://em-yu.github.io/research/cassie/), [[Paper]](http://www-sop.inria.fr/reves/Basilic/2021/YASBS21/CASSIE_author_version.pdf)
 
-This is research code, expect bugs and performance issues. If you are interested in using the project and need help setting up or adapting it, you can [contact us](mailto:emilie.yu@inria.fr).
+This is research code, expect to discover some bugs and performance issues. If you are interested in using the project and need help setting up or adapting it, you can [contact us](mailto:emilie.yu@inria.fr).
 
-If this is useful for your research, please [cite us](/#citing-this-project).
+If this is useful for your research, please [cite us](#citing-this-project).
 
 ## Installation
 
@@ -65,9 +65,16 @@ When exporting multiple data files are created (the file naming convention may v
 
 You can choose which file formats among those you wish to have at export by editing the script attributes in `ExportController` in the scene. All file formats are active by default. You can also customize whether the scene should be cleared after export or not (default is: not clearing the scene).
 
-## Limitations, known issues
+## Dependencies/external code
 
+* [SteamVR Unity plugin](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647): included in the project
+* [Math.Net](https://numerics.mathdotnet.com/): included in the project
+* Tubular mesh generation adapted from [mattatz/unity-tubular](mattatz/unity-tubular)
+* [An Algorithm for Triangulating Multiple 3D Polygons](https://www.cse.wustl.edu/~taoju/zoum/projects/TriMultPoly/index.html), Ming Zou et al, 2013: we did a C wrapper around their original code, built it as a native plugin and included it in the project
 
+## License
+
+The code in this repository except for the external dependencies is provided under the GNU GPLv3 License. The external dependencies are provided under their respective licenses.
 
 ## Citing this project
 
