@@ -6,7 +6,7 @@ We additionally provide a good variety of sketch export options (polylines of in
 
 Please check out our project for more information: [[Project page]](https://em-yu.github.io/research/cassie/), [[Paper]](http://www-sop.inria.fr/reves/Basilic/2021/YASBS21/CASSIE_author_version.pdf)
 
-This is research code, expect to discover some bugs and performance issues. If you are interested in using the project and need help setting up or adapting it, you can [contact us](mailto:emilie.yu@inria.fr).
+This is research code, expect to discover some bugs, compatibility and performance issues. If you are interested in using the project and need help setting up or adapting it, you can [contact us](mailto:emilie.yu@inria.fr).
 
 If this is useful for your research, please [cite us](#citing-this-project).
 
@@ -46,13 +46,16 @@ These instructions are valid both in Debug mode (while playing from the editor) 
 
 ### Sketching
 
-* In the VR scene, you should see a cheatsheet that displays the available controls on your controller (if you don't see you controller type, you need to set the correct controller type, see above). The blue dot corresponds to the dominant hand, and the grey dot corresponds to the non-dominant hand. You can also find the cheatsheet for all 3 controller types [here](http://www-sop.inria.fr/members/Emilie.Yu/Controllers-cheatseet.pdf).
+* In the VR scene, you should see a cheatsheet that displays the available controls on your controller (if you don't see the correct controller type, you need to set it, see [above](#set-up-controller-type-and-dominant-hand)). The blue dot corresponds to the dominant hand, and the grey dot corresponds to the non-dominant hand. You can also find the cheatsheet for all 3 controller types [here](http://www-sop.inria.fr/members/Emilie.Yu/Controllers-cheatseet.pdf).
+* If your dominant hand dot is orange, you are in "freehand sketching" mode, with none of the neatening and surfacing feature. When your dominant hand dot is blue, you have neatening and predictive surfacing enabled.
 * For a detailed tutorial, you can watch the [instructions video](https://youtu.be/Z2JEOQJK8cg) for the remote user study we ran. There are a few irrelevant bits, such as information about the study task itself and how to send data back to us, please use the time labels to skip those.
 
 ### Exporting a sketch
 
 * At any time during a sketch you can export your current sketch by pressing `X` on the keyboard. This will not delete your current sketch.
 * You can also press the `Next` button on the VR controller (see cheatsheet), which will save your current sketch data and clear the scene.
+
+All exported files will be available in the folder `SketchData~` in the folder `Assets` if playing from the editor, and in the folder `VRSketchStudy_Data` if playing from a build.
 
 When exporting multiple data files are created (the file naming convention may vary slightly, with a `system` ID in the name when exporting from the `Next` button):
 
@@ -71,10 +74,11 @@ You can choose which file formats among those you wish to have at export by edit
 * [Math.Net](https://numerics.mathdotnet.com/): included in the project
 * Tubular mesh generation adapted from [mattatz/unity-tubular](mattatz/unity-tubular)
 * [An Algorithm for Triangulating Multiple 3D Polygons](https://www.cse.wustl.edu/~taoju/zoum/projects/TriMultPoly/index.html), Ming Zou et al, 2013: we did a C wrapper around their original code, built it as a native plugin and included it in the project
+* [CGAL](https://www.cgal.org/): for mesh subdivision and smoothing. Built as a native plugin and included in the project
 
 ## License
 
-The code in this repository except for the external dependencies is provided under the GNU GPLv3 License. The external dependencies are provided under their respective licenses.
+The code in this repository except for the external dependencies is provided under the MIT License. The external dependencies are provided under their respective licenses.
 
 ## Citing this project
 
