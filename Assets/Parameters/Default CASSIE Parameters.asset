@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: c454ca17c5cfa654fb13388fe5adfb8a, type: 3}
   m_Name: Default CASSIE Parameters
-  m_EditorClassIdentifier: Assembly-CSharp::CASSIEParameters
+  m_EditorClassIdentifier: 
   defaultSmallDistance: 0.02
   smallAngle: 0.5235988
   minSamplingDistance: 0.1
@@ -26,4 +26,9 @@ MonoBehaviour:
   proximityThreshold: 2
   mergeConstraintsThreshold: 0.5
   snapToExistingNodeThreshold: 1
+  projectToMirrorDistanceThreshold: 1.25
+  projectOnSurface: 1
+  projectToSurfaceDistanceThreshold: 2.5
+  muFidelity: 0.6
+  minDistanceBetweenAnchors: 1
   exportRDPError: 0.1

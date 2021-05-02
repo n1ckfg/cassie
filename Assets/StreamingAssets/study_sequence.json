@@ -1,8 +1,8 @@
 {
-  "InteractionModeSequence": [ 2, 0, 0, 1, 1, 1, 1, 1, 1 ],
-  "SystemSequence":          [ 2, 1, 2, 0, 0, 1, 1, 2, 2 ],
-  "ModelSequence":           [ 0, 0, 0, 1, 3, 1, 3, 1, 3 ],
-  "BreakTime":               [ 0, 0, 1, 0, 1, 0, 1, 0, 0 ],
-  "ShowExample":             [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-  "TimeLimit": [ 0, 0, 0, 305, 305, 305, 305, 305, 305 ]
+  "InteractionModeSequence": [ 2 ],
+  "SystemSequence":          [ 2 ],
+  "ModelSequence":           [ 0 ],
+  "BreakTime":               [ 0 ],
+  "ShowExample":             [ 0 ],
+  "TimeLimit": [ 0 ]
 }
