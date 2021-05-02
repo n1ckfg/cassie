@@ -12,6 +12,10 @@ If this is useful for your research, please [cite us](#citing-this-project).
 
 ## Installation
 
+You can try out directly our built executable: [download executable](https://ns.inria.fr/d3/CASSIE/CASSIE-build-2021-05-02.zip).
+
+Or you can clone this repository and open the Unity project:
+
 * Install Unity 2019.3.9f1 from [Unity's website](https://unity3d.com/fr/get-unity/download/archive). The app was not tested with other versions of Unity, and will be incompatible with newer versions of Unity such as 2020, due to us using the legacy VR input system.
 * Install SteamVR if you do not have it already. This is necessary to have the input from VR headset and controllers working. We provide bindings for HTC Vive Wand, Oculus Touch controllers, Valve Knuckles. If you have another type of controller that is supported by SteamVR you should be able to setup your own bindings through the SteamVR 
 * Clone this repository. (Warning: downloading the repository from gitlab UI instead of cloning leads to the files stored with git LFS to be missing, which will cause build problems.)
