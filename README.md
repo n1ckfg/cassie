@@ -72,6 +72,16 @@ When exporting multiple data files are created (the file naming convention may v
 
 You can choose which file formats among those you wish to have at export by editing the script attributes in `ExportController` in the scene. All file formats are active by default. You can also customize whether the scene should be cleared after export or not (default is: not clearing the scene).
 
+## Where to find algorithms from the paper
+
+* Stroke structuring is done in 2 steps:
+  * Detecting a number of candidate intersections between the new stroke and the rest of the sketch: this is done mainly thanks to Unity's collision detection, see mainly in [`BrushCollisions`](/Assets/Scripts/Select/BrushCollisions.cs) and [`DrawController`](/Assets/Scripts/Create/Sketch/DrawController.cs#L258) 
+  * Selecting and applying some constraints by solving an optimisation problem: see [`ConstraintSolver`](/Assets/Scripts/Create/Sketch/Beautify/ConstraintSolver.cs) (for Bezier curves), and [`LineCurve`](/Assets/Scripts/Curves/LineCurve.cs#L117) (for the simple heuristic method we use to constrain lines)
+* Surfacing patches involves:
+  * Maintaining a graph data structure for the sketch: see [`Graph`](/Assets/Scripts/Data/Graph/Graph.cs) for the data structure, and [`FinalStroke`](/Assets/Scripts/Data/Strokes/FinalStroke.cs) to see how we update graph data when strokes are added or deleted
+  * Launching local searches for relevant cycles: see [`CycleDetection`](/Assets/Scripts/Data/Graph/CycleDetection.cs)
+  * Triangulating the surface patches: see [`SurfaceManager`](/Assets/Scripts/Create/Surface/SurfaceManager.cs#L166) where we call code from Zou et al. to triangulate a closed curve
+
 ## Dependencies/external code
 
 * [SteamVR Unity plugin](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647): included in the project
