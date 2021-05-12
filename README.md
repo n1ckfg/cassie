@@ -51,7 +51,7 @@ These instructions are valid both in Debug mode (while playing from the editor) 
 ### Sketching
 
 * In the VR scene, you should see a cheatsheet that displays the available controls on your controller (if you don't see the correct controller type, you need to set it, see [above](#set-up-controller-type-and-dominant-hand)). The blue dot corresponds to the dominant hand, and the grey dot corresponds to the non-dominant hand. You can also find the cheatsheet for all 3 controller types [here](http://www-sop.inria.fr/members/Emilie.Yu/Controllers-cheatseet.pdf).
-* If your dominant hand dot is orange, you are in "freehand sketching" mode, with none of the neatening and surfacing feature. When your dominant hand dot is blue, you have neatening and predictive surfacing enabled.
+* If your dominant hand dot is orange, you are in "freehand sketching" mode, with none of the neatening and surfacing feature. When your dominant hand dot is blue, you have neatening and predictive surfacing enabled. To toggle between these 2 modes, press the trigger of your non-dominant hand.
 * For a detailed tutorial, you can watch the [instructions video](https://youtu.be/Z2JEOQJK8cg) for the remote user study we ran. There are a few irrelevant bits, such as information about the study task itself and how to send data back to us, please use the time labels to skip those.
 
 ### Exporting a sketch
